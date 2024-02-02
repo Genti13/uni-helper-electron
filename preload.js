@@ -15,9 +15,8 @@ contextBridge.exposeInMainWorld('api', {
   path: async () => {
     try {
       const res = await ipcRenderer.invoke('potd', "./src/db/sqlite.db", true);
-      document.getElementById('pout').innerText = 'Output: ' + res;
     } catch (error) {
-      document.getElementById('pout').innerText = 'Output: ' + error;
+      console.log(error);
     }
   },
   equery: async () => {
@@ -39,9 +38,9 @@ contextBridge.exposeInMainWorld('api', {
   fetchone: async (query, arr) => {
     try {
       const res = await ipcRenderer.invoke('fetchone', query, arr);
-      document.getElementById('pout').innerText = 'Output: ' + JSON.stringify(res);
+      return res;
     } catch (error) {
-      document.getElementById('pout').innerText = 'Output: ' + error;
+      console.log(error);
     }
   }
 })
