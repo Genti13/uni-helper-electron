@@ -1,0 +1,20 @@
+{
+  "name": "electron-uni-helper",
+  "version": "1.0.0",
+  "description": "Helper",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Genti",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^28.1.0",
+    "electron-rebuild": "^3.2.9"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.2",
+    "sqlite-electron": "^3.0.5"
+  }
+}

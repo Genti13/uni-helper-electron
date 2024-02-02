@@ -1,0 +1,6 @@
+@import url("./bootstrap.min.css");
+
+#subjects-dropdown {
+    max-height: 512px;
+    overflow-y: scroll;
+}
